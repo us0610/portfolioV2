@@ -1,0 +1,120 @@
+.hero__section {
+  // padding-top: 25.5rem;
+  height: 100vh;
+  padding: 25.5rem 2rem 0rem 2rem;
+
+  @media screen and (max-width: 500px) {
+    padding: 15rem 2rem 0rem 2rem;
+    height: auto;
+  }
+
+  .hero__text__content {
+    width: 100%;
+    // margin-top: -8rem;
+
+    .hero__subheading__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .hero__subheading {
+        font-size: 2.4rem;
+        margin-left: 1rem;
+      }
+    }
+
+    .hero__heading {
+      font-family: 'Cormorant Garamond';
+      font-weight: 300;
+      font-size: 11rem;
+      max-width: 92.1rem;
+      line-height: 11rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .hero__image {
+    background: url('../../images/hero-image.webp');
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 50%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+    &::after {
+      content: '';
+      background-color: #000;
+      opacity: 0.25;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .sub__hero__para {
+    margin-top: 7rem;
+    font-size: 2rem;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    width: 100%;
+    max-width: 65rem;
+    letter-spacing: 0.1rem;
+    line-height: 3rem;
+
+    @media screen and (max-width: 500px) {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
+}
+
+// PROJECTS SECTION
+.projects {
+  padding: 33rem 3rem 3rem 3rem;
+
+  @media screen and (max-width: 500px) {
+    padding: 20rem 3rem 3rem 3rem;
+  }
+
+  .grid-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+      grid-gap: 10rem;
+    }
+  }
+}
+
+// START ANIMATION
+.star {
+  animation-name: star;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes star {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 500px) {
+  .hero__image {
+    display: none;
+  }
+}
